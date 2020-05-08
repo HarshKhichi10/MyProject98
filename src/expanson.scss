@@ -1,0 +1,293 @@
+
+
+       *, ::after, ::before {
+        -webkit-box-sizing: inherit;
+         box-sizing: inherit;
+    }
+
+    html, body, ul, ol {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html>body {
+           font-family: 'Roboto','Helvetica','Arial',sans-serif!important;
+           background-color: #eeeeee;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-size-adjust: 100%;
+           text-rendering: optimizeLegibility;
+          -webkit-text-rendering: optimizeLegibility;
+    }
+    h1{
+        font-weight: 400;
+        color: #999;
+        font-size: 13px;
+        margin: 48px 0 12px 22px;
+    }
+    div.panel{
+        max-width: 100%;
+        margin: auto;
+        margin-top: calc(5% - 0px);
+    }
+    details{
+        border: none; 
+        font-size:10px;
+        background:#fff;
+
+         }
+
+    details div.content{
+        
+    }
+
+    details[open] summary:after {
+        color:#9e9e9e;
+        content: "expand_less";
+        font-family: 'Material Icons';
+    }
+    details[open]{
+        margin-top:16px;
+        margin-bottom:16px;
+        border:none;
+        border-radius: 2px;
+        width: 100%;
+
+    }
+    details[open]:first-child{
+        margin-top:0;
+        margin-bottom:16px;
+        border:none;
+    }
+    details[open]:last-child{
+        margin-top:16px;
+        margin-bottom:0px;
+        border:none;
+    }
+
+    summary{
+        outline:none;
+        cursor: pointer;
+        padding: 5px;
+        height: 15px;
+        width: 100%;
+        border: none;
+        color:#212121;
+        position: relative;
+        font-size: 15px;
+    }
+    summary:hover{
+    border-bottom: 2px solid red;
+    }
+
+    details[open] summary:hover{
+        background:none;
+    }
+    summary ul {
+        padding-left: 0;
+        list-style: none;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+    }
+    summary ul p{
+         flex: 1 100%;
+            }
+    summary ul li span{
+          display: block;
+          font-size: 12px;
+          margin-top: 6px;      
+    }
+    summary::-webkit-details-marker {
+        display: none;
+    }
+    summary::after {
+        content: "expand_more";
+        font-family: 'Material Icons';
+        color: #9e9e9e; 
+        font-size: 1.5em;
+        padding: 0;
+        text-align: center;
+        margin-top: 0;
+        position: absolute;
+        top: calc(50% - 12px);
+        bottom: 0;
+        right: 0;
+        width: 6%;
+    }  
+    
+  
+    .titleValue{ color: #757575; }  
+     time{ color: #757575; opacity: .75; }  
+    .list-unstyled { margin-top:15px; padding-left: 0; list-style: none;}
+
+$white: rgba(254,255,250,1)
+$grey: rgba(220,231,235,1)
+$red: rgba(255,104,115,1)
+$black: rgba(48,69,92,0.8)
+$sans: 'Titillium Web', sans-serif
+  
+.transition
+  transition: all 0.25s ease-in-out
+
+.flipIn
+  animation: flipdown 0.5s ease both
+    
+.no-select
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+html
+  width: 100%
+  height: 100%
+  perspective: 900
+  overflow-y: scroll
+  background-color: $grey
+  font-family: $sans
+  color: $black
+  
+body
+  min-height: 0
+  display: inline-block
+  position: relative
+  left: 50%
+  margin: 90px 0
+  transform: translate( -50% , 0 )
+  box-shadow: 0 10px 0 0 $red inset
+  background-color: $white
+  max-width: 450px
+  padding: 30px
+  
+  @media ( max-width:550px )
+    box-sizing: border-box
+    transform: translate( 0 , 0 )
+    max-width: 100%
+    min-height: 100%
+    margin: 0
+    left: 0
+
+h1 , h2
+  color: $red
+
+h1
+  text-transform: uppercase
+  font-size: 36px
+  line-height: 42px
+  letter-spacing: 3px
+  font-weight: 100
+  @extend .flipIn
+  
+h2
+  font-size: 26px
+  line-height: 34px
+  font-weight: 300
+  letter-spacing: 1px
+  display: block
+  background-color: $white
+  margin: 0
+  cursor: pointer
+  @extend .no-select
+
+p
+  color: $black
+  font-size: 17px
+  line-height: 26px
+  letter-spacing: 1px
+  position: relative
+  overflow: hidden
+  max-height: 800px
+  @extend .transition
+  opacity: 1
+  transform: translate( 0 , 0 )  
+  margin-top: 14px
+  z-index: 2
+  
+ul
+  list-style: none
+  perspective: 900
+  padding: 0
+  margin: 0
+  
+  li
+    position: relative
+    padding: 0
+    margin: 0
+    padding-bottom: 4px
+    padding-top: 18px
+    border-top: 1px dotted $grey
+    @extend .flipIn
+      
+    &:nth-of-type(1)
+      animation-delay: 0.5s
+    
+    &:nth-of-type(2)
+      animation-delay: 0.75s
+        
+    &:nth-of-type(3)
+      animation-delay: 1.0s
+    
+    &:last-of-type
+      padding-bottom: 0
+      
+    i
+      position: absolute
+      transform: translate( -6px , 0 )
+      margin-top: 16px
+      right: 0
+      
+      &:before , &:after
+        content: ""
+        @extend .transition
+        position: absolute
+        background-color: $red
+        width: 3px
+        height: 9px
+        
+      &:before
+        transform: translate( -2px , 0 ) rotate( 45deg )
+          
+      &:after
+        transform: translate( 2px , 0 ) rotate( -45deg )
+    
+    input[type=checkbox]
+      position: absolute
+      cursor: pointer
+      width: 100%
+      height: 100%
+      z-index: 1
+      opacity: 0
+      
+      &:checked
+        &~p
+          margin-top: 0
+          max-height: 0
+          opacity: 0
+          transform: translate( 0 , 50% )
+            
+        &~i
+          &:before
+            transform: translate( 2px , 0 ) rotate( 45deg )
+          
+          &:after
+            transform: translate( -2px , 0 ) rotate( -45deg )
+
+@keyframes flipdown
+  0%
+    opacity: 0
+    transform-origin: top center
+    transform: rotateX(-90deg)
+  5%
+    opacity: 1
+  80%
+    transform: rotateX(8deg)
+  83%
+    transform: rotateX(6deg)
+  92%
+    transform: rotateX(-3deg)
+  100%
+    transform-origin: top center
+    transform: rotateX(0deg) 

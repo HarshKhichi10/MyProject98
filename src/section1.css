@@ -1,0 +1,138 @@
+::placeholder{
+
+    color: black;
+}
+
+.Main-header{
+height: 40px;
+width: 100%;
+background-color: white;
+color: black;
+display: flex;
+}
+.mono-header{
+
+    margin-left: 1%;
+    margin-top: -1%;
+    padding: 10px;
+   
+    border-right:1px solid gray;
+}
+
+.header-elements{
+    display:flex;
+    font-family: ;
+    font-size: 15px;
+    color: gray;
+     
+    }
+.nav-elements {
+    display:inline; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-right: 3%;
+    margin-left: 28%;
+    
+}    
+.searchtop input{
+ margin-left: 10%;
+  
+
+}
+.searchtop{
+align-items: right;}
+
+.Navbar{
+background-color: #C21A09;
+color: white;
+margin-top: -1%;
+height: 100px;
+}
+.Navbar h3{
+text-align: left;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 40px;
+letter-spacing: .2;
+text-transform: uppercase;
+margin-left: 3%;
+margin-top:2%;
+
+}
+.nav-links{
+
+margin-left:-4%;
+margin-bottom: 500%;
+}
+.nav-links p {
+    display: inline;
+    padding: 8px;
+    border-right: .01px solid lightgrey;
+    font-size: 13px;
+    font-weight: 500;
+    font-family:'Open Sans', sans-serif;
+    margin-right: .4%;
+    margin-bottom: 20%;
+}
+.nav-links button {
+    display: inline;
+    padding: 8px;
+    border-right: .01px solid lightgrey;
+    font-size: 13px;
+    font-weight: 500;
+    font-family:'Open Sans', sans-serif;
+    margin-right: .4%;
+    margin-bottom: 20%;
+}
+.link1:hover{
+border-bottom: 4px solid red;
+}
+.link2:hover{
+  border-bottom: 4px solid blue;
+  }
+  .link3:hover{
+    border-bottom: 4px solid purple;
+    }  
+    .link4:hover{
+      border-bottom: 4px solid green;
+      }     
+      .link5:hover{
+        border-bottom: 4px solid yellow;
+        } 
+        .link6:hover{
+          border-bottom: 4px solid orange;
+          } 
+          .link7:hover{
+            border-bottom: 4px solid orangered;
+            } 
+            .link8:hover{
+              border-bottom: 5px solid cyan;
+              }
+                             
+.ins-navlink:hover{
+border-bottom: 5px solid white;
+}    
+
+.more-btn2:hover{
+background-color: #C21A09;
+color: white;
+}
+.intext:hover{
+  border-bottom: .5px solid white;
+}
+.hvr-ele:hover{
+   color: #57A0D3;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
